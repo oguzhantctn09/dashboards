@@ -1,0 +1,535 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      6
+    ],
+    "clusterVersion": "1.258.110.20230130-151402"
+  },
+  "id": "961a1260-6c45-4461-a66b-67d67f7ce046",
+  "dashboardMetadata": {
+    "name": "🌍 3rd Parties",
+    "shared": true,
+    "owner": "admin",
+    "popularity": 1,
+    "hasConsistentColors": false
+  },
+  "tiles": [
+    {
+      "name": "",
+      "tileType": "SERVICES",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 0,
+        "width": 266,
+        "height": 152
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "SERVICE",
+        "customName": "Services",
+        "defaultName": "Services",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "NAME": [
+              "sbm.org"
+            ]
+          }
+        }
+      },
+      "chartVisible": true
+    },
+    {
+      "name": "SBM",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 190,
+        "width": 152,
+        "height": 38
+      },
+      "tileFilter": {}
+    },
+    {
+      "name": "Request Count",
+      "tileType": "DATA_EXPLORER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {},
+      "customName": "Data explorer results",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.requestCount.total",
+          "spaceAggregation": "SUM",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [
+              {
+                "filter": "dt.entity.service",
+                "filterType": "NAME",
+                "filterOperator": "OR",
+                "nestedFilters": [],
+                "criteria": [
+                  {
+                    "value": "sbm.org.tr",
+                    "evaluator": "IN"
+                  }
+                ]
+              }
+            ],
+            "criteria": []
+          },
+          "limit": 1,
+          "metricSelector": "builtin:service.\"requestCount\".total:(fold,):filter(and(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"sbm.org.tr~\")\")))):splitBy():sum:auto:sort(value(avg,descending)):limit(1)",
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "SINGLE_VALUE",
+        "global": {},
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": []
+        },
+        "singleValueSettings": {
+          "showSparkLine": true
+        },
+        "thresholds": [
+          {
+            "axisTarget": "LEFT",
+            "rules": [
+              {
+                "color": "#7dc540"
+              },
+              {
+                "color": "#f5d30f"
+              },
+              {
+                "color": "#dc172a"
+              }
+            ],
+            "visible": true
+          }
+        ]
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.requestCount.total:filter(and(or(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"sbm.org.tr~\")\"))))):splitBy():sum:auto:sort(value(sum,descending)):limit(1)):limit(100):names",
+        "resolution=null&(builtin:service.requestCount.total:filter(and(or(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"sbm.org.tr~\")\"))))):splitBy():sum:auto:sort(value(sum,descending)):limit(1))"
+      ]
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 266,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Response time",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "SINGLE_VALUE",
+          "series": [
+            {
+              "metric": "builtin:service.response.time",
+              "aggregation": "AVG",
+              "type": "LINE",
+              "entityType": "SERVICE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "SPECIFIC_ENTITIES": [
+              "SERVICE-C32C2F7E5765D55A"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 266,
+        "width": 266,
+        "height": 266
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Failure rate (any  errors)",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "SINGLE_VALUE",
+          "series": [
+            {
+              "metric": "builtin:service.errors.total.rate",
+              "aggregation": "AVG",
+              "type": "LINE",
+              "entityType": "SERVICE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "SPECIFIC_ENTITIES": [
+              "SERVICE-C32C2F7E5765D55A"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 0,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [Hata detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-C32C2F7E5765D55A/mda?mdaId=96b08356-369f-4f57-a4f5-d39a5507e7b1&gtf=-2h&gf=all&metric=FAILURE_RATE&dimension=HTTP%20%7BHTTP-Status%7D%20:%20%7BRequest:Name%7D%20&mergeServices=false&aggregation=AVERAGE&percentile=80&chart=LINE&servicefilter=0%1E3%110)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [Yavaş istek detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-C32C2F7E5765D55A/mda?mdaId=960753a7-27fb-4ac7-acd1-a10880690ae7&gtf=-2h&gf=all&metric=RESPONSE_TIME&dimension=%7BRequest:Name%7D%20&mergeServices=false&aggregation=MEDIAN&percentile=80&chart=LINE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 0,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [İşlem detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-C32C2F7E5765D55A/mda?mdaId=0113324d-79ef-404a-878a-3e8ec7dfc650&gtf=-2h&gf=all&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D%20&mergeServices=false&aggregation=COUNT&percentile=80&chart=LINE)"
+    },
+    {
+      "name": "Denizbank",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 836,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {}
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 874,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Response time",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "SINGLE_VALUE",
+          "series": [
+            {
+              "metric": "builtin:service.response.time",
+              "aggregation": "AVG",
+              "type": "LINE",
+              "entityType": "SERVICE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "SPECIFIC_ENTITIES": [
+              "SERVICE-AA9FF62620E916A9"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 608,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [Yavaş istek detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-AA9FF62620E916A9/mda?mdaId=46430d4b-98b3-4999-8962-af440f641eb3&gtf=-2h&gf=all&metric=RESPONSE_TIME&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=MEDIAN&percentile=80&chart=LINE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 608,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [İşlem detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-AA9FF62620E916A9/mda?mdaId=584edc66-477b-4782-af95-b6094a0f14e1&gtf=-2h&gf=all&metric=REQUEST_COUNT&dimension=%7BRequest:Name%7D&mergeServices=false&aggregation=COUNT&percentile=80&chart=LINE)"
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 874,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Failure rate (any  errors)",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "SINGLE_VALUE",
+          "series": [
+            {
+              "metric": "builtin:service.errors.total.rate",
+              "aggregation": "AVG",
+              "type": "LINE",
+              "entityType": "SERVICE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "SPECIFIC_ENTITIES": [
+              "SERVICE-AA9FF62620E916A9"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 608,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## [Hata detayları](https://axdynasrv/e/ada66dc4-def6-4828-a501-678ac85164cd/ui/services/SERVICE-AA9FF62620E916A9/mda?mdaId=2b73fc9e-7d61-4589-9d9d-1b4cdc4f15c8&gtf=-2h&gf=all&metric=FAILURE_RATE&dimension=HTTP%20%7BHTTP-Status%7D%20:%20%7BRequest:Name%7D%20&mergeServices=false&aggregation=AVERAGE&percentile=80&chart=LINE&servicefilter=0%1E3%110)"
+    },
+    {
+      "name": "",
+      "tileType": "SERVICES",
+      "configured": true,
+      "bounds": {
+        "top": 380,
+        "left": 608,
+        "width": 266,
+        "height": 152
+      },
+      "tileFilter": {},
+      "filterConfig": {
+        "type": "SERVICE",
+        "customName": "Services",
+        "defaultName": "Services",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {
+          "SERVICE": {
+            "NAME": [
+              "denizbank.com"
+            ]
+          }
+        }
+      },
+      "chartVisible": true
+    },
+    {
+      "name": "Request Count",
+      "tileType": "DATA_EXPLORER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 608,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {},
+      "customName": "Data explorer results",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.requestCount.total",
+          "spaceAggregation": "SUM",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [
+              {
+                "filter": "dt.entity.service",
+                "filterType": "NAME",
+                "filterOperator": "OR",
+                "nestedFilters": [],
+                "criteria": [
+                  {
+                    "value": "denizbank.com",
+                    "evaluator": "IN"
+                  }
+                ]
+              }
+            ],
+            "criteria": []
+          },
+          "limit": 1,
+          "metricSelector": "builtin:service.\"requestCount\".total:(fold,):filter(and(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"denizbank.com~\")\")))):splitBy():sum:auto:sort(value(avg,descending)):limit(1)",
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "SINGLE_VALUE",
+        "global": {},
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": []
+        },
+        "singleValueSettings": {
+          "showSparkLine": true
+        },
+        "thresholds": [
+          {
+            "axisTarget": "LEFT",
+            "rules": [
+              {
+                "color": "#7dc540"
+              },
+              {
+                "color": "#f5d30f"
+              },
+              {
+                "color": "#dc172a"
+              }
+            ],
+            "visible": true
+          }
+        ]
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.requestCount.total:filter(and(or(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"denizbank.com~\")\"))))):splitBy():sum:auto:sort(value(sum,descending)):limit(1)):limit(100):names",
+        "resolution=null&(builtin:service.requestCount.total:filter(and(or(in(\"dt.entity.service\",entitySelector(\"type(service),entityName(~\"denizbank.com~\")\"))))):splitBy():sum:auto:sort(value(sum,descending)):limit(1))"
+      ]
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1748,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {},
+      "markdown": "## 🔍  [Ana Menü](#dashboard;gtf=-2h;gf=all;id=809e9a30-aec2-44a9-8c3a-96d36df3b789)"
+    }
+  ]
+}
