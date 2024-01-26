@@ -1,11 +1,11 @@
- {
+{
   "metadata": {
     "configurationVersions": [
-      6
+      7
     ],
-    "clusterVersion": "1.264.120.20230425-092425"
+    "clusterVersion": "1.282.121.20240122-081147"
   },
-  "id": "940c0534-ee0f-4bd3-8097-016e250d0ecb",
+  "id": "986f4d52-17fa-47cb-8f2a-5636b8d03350",
   "dashboardMetadata": {
     "name": "Monitoring Overview",
     "shared": true,
@@ -345,8 +345,8 @@
       "chartVisible": true
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average Load Action Duration",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 950,
@@ -356,38 +356,83 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average Load Action Duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:apps.web.actionDuration.load.browser",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {
-            "nullbuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1623886078913,
-              "customColor": "#008cdb"
-            }
-          }
+      "customName": "Average Load Action Duration",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:apps.web.actionDuration.load.browser",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": [
+              {
+                "name": "Action duration - load action (by browser) [web]",
+                "color": "#008cdb"
+              }
+            ]
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:apps.web.actionDuration.load.browser:splitBy():avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average Load Action Duration",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 950,
@@ -397,38 +442,83 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average Load Action Duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.web.actionDuration.load.browser",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {
-            "nullbuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1623886577886,
-              "customColor": "#008cdb"
-            }
-          }
+      "customName": "Average Load Action Duration",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:apps.web.actionDuration.load.browser",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": [
+              {
+                "name": "Action duration - load action (by browser) [web]",
+                "color": "#008cdb"
+              }
+            ]
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:apps.web.actionDuration.load.browser:splitBy():avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average XHR Action Duration",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1178,
@@ -438,38 +528,83 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average XHR Action Duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:apps.web.actionDuration.xhr.browser",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {
-            "nullbuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1623889190179,
-              "customColor": "#008cdb"
-            }
-          }
+      "customName": "Average XHR Action Duration",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:apps.web.actionDuration.xhr.browser",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": [
+              {
+                "name": "Action duration - XHR action (by browser) [web]",
+                "color": "#008cdb"
+              }
+            ]
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:apps.web.actionDuration.xhr.browser:splitBy():avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average XHR Action Duration",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1178,
@@ -479,38 +614,83 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average XHR Action Duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.web.actionDuration.xhr.browser",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {
-            "nullbuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1623889307294,
-              "customColor": "#008cdb"
-            }
-          }
+      "customName": "Average XHR Action Duration",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:apps.web.actionDuration.xhr.browser",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": [
+              {
+                "name": "Action duration - XHR action (by browser) [web]",
+                "color": "#008cdb"
+              }
+            ]
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:apps.web.actionDuration.xhr.browser:splitBy():avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Request count",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 190,
@@ -520,36 +700,76 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Request count",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:service.requestCount.total",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Request count",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.requestCount.total",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:service.requestCount.total:splitBy(\"dt.entity.service\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
       "name": "",
@@ -584,8 +804,8 @@
       "chartVisible": true
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Request count",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 190,
@@ -595,40 +815,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Request count",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.requestCount.total",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Request count",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.requestCount.total",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.requestCount.total:splitBy(\"dt.entity.service\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average Response time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -638,40 +898,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average Response time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:service.response.time",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Average Response time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.response.time",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:service.response.time:splitBy(\"dt.entity.service\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Average Response time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -681,40 +981,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Average Response time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.response.time",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Average Response time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.response.time",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.response.time:splitBy(\"dt.entity.service\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "99th% Response time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1102,
@@ -724,41 +1064,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "99th% Response time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:service.response.time",
-              "aggregation": "PERCENTILE",
-              "percentile": 99,
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "99th% Response time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.response.time",
+          "spaceAggregation": "PERCENTILE_90",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:service.response.time:splitBy(\"dt.entity.service\"):percentile(90.0):sort(value(percentile(90.0),descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "99th% Response time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1102,
@@ -768,41 +1147,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "99th% Response time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.response.time",
-              "aggregation": "PERCENTILE",
-              "percentile": 99,
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "99th% Response time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.response.time",
+          "spaceAggregation": "PERCENTILE_90",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.response.time:splitBy(\"dt.entity.service\"):percentile(90.0):sort(value(percentile(90.0),descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Failure rate (any  errors)",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 494,
@@ -812,40 +1230,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Failure rate (any  errors)",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:service.errors.total.rate",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Failure rate (any  errors)",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.errors.total.rate",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:service.errors.total.rate:splitBy(\"dt.entity.service\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Failure rate (any  errors)",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 494,
@@ -855,40 +1313,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Failure rate (any  errors)",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.errors.total.rate",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Failure rate (any  errors)",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.errors.total.rate",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.errors.total.rate:splitBy(\"dt.entity.service\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "CPU usage %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 190,
@@ -898,40 +1396,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "CPU usage %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:host.cpu.usage",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "CPU usage %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.cpu.usage",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:host.cpu.usage:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "CPU usage %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 190,
@@ -941,36 +1479,76 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "CPU usage %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.cpu.usage",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "CPU usage %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.cpu.usage",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:host.cpu.usage:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
       "name": "",
@@ -1037,8 +1615,8 @@
       "chartVisible": true
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Memory used %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 494,
@@ -1048,40 +1626,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Memory used %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:host.mem.usage",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Memory used %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.mem.usage",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:host.mem.usage:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Memory used %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 494,
@@ -1091,40 +1709,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Memory used %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.mem.usage",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Memory used %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.mem.usage",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:host.mem.usage:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Disk available %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -1134,40 +1792,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Disk available %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:host.disk.free",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Disk available %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.disk.free",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:host.disk.free:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Disk available %",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -1177,40 +1875,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Disk available %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.disk.free",
-              "aggregation": "AVG",
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Disk available %",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:host.disk.free",
+          "spaceAggregation": "AVG",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.host"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:host.disk.free:splitBy(\"dt.entity.host\"):avg:sort(value(avg,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Garbage collection total collection time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1102,
@@ -1220,40 +1958,80 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Garbage collection total collection time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:tech.jvm.memory.gc.collectionTime",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "PROCESS_GROUP_INSTANCE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.process_group_instance",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Garbage collection total collection time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:tech.jvm.memory.gc.collectionTime",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.process_group_instance"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "GRAPH_CHART",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=null&(builtin:tech.jvm.memory.gc.collectionTime:splitBy(\"dt.entity.process_group_instance\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Garbage collection total collection time",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 1102,
@@ -1263,36 +2041,76 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Garbage collection total collection time",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:tech.jvm.memory.gc.collectionTime",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "PROCESS_GROUP_INSTANCE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.process_group_instance",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Garbage collection total collection time",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:tech.jvm.memory.gc.collectionTime",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.process_group_instance"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:tech.jvm.memory.gc.collectionTime:splitBy(\"dt.entity.process_group_instance\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
       "name": "Database health",
@@ -1309,8 +2127,8 @@
       "chartVisible": true
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Failed connections",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 418,
@@ -1320,36 +2138,76 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Failed connections",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.dbconnections.failure",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Failed connections",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.dbconnections.failure",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.dbconnections.failure:splitBy(\"dt.entity.service\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
       "name": "Database",
@@ -1365,8 +2223,8 @@
       "isAutoRefreshDisabled": false
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Slowest Database - 99th% RT",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 190,
@@ -1376,46 +2234,94 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Slowest Database - 99th% RT",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.requestCount.total",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Slowest Database - 99th% RT",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.requestCount.total",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "SERVICE": {
-            "SERVICE_TYPE": [
-              "3"
-            ]
-          }
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [
+              {
+                "filter": "dt.entity.service",
+                "filterType": "ENTITY_ATTRIBUTE",
+                "filterOperator": "OR",
+                "entityAttribute": "servicetype",
+                "nestedFilters": [],
+                "criteria": [
+                  {
+                    "value": "DATABASE_SERVICE",
+                    "evaluator": "IN"
+                  }
+                ]
+              }
+            ],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
         }
-      }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
+        },
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.requestCount.total:filter(and(or(in(\"dt.entity.service\",entitySelector(\"type(service),servicetype(~\"DATABASE_SERVICE~\")\"))))):splitBy(\"dt.entity.service\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Connection failure rate",
+      "tileType": "DATA_EXPLORER",
       "configured": true,
       "bounds": {
         "top": 684,
@@ -1425,36 +2331,76 @@
       },
       "tileFilter": {},
       "isAutoRefreshDisabled": false,
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Connection failure rate",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:service.dbconnections.failureRate",
-              "aggregation": "NONE",
-              "type": "LINE",
-              "entityType": "SERVICE",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "dt.entity.service",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
+      "customName": "Connection failure rate",
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.dbconnections.failureRate",
+          "spaceAggregation": "VALUE",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
           ],
-          "resultMetadata": {}
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [],
+            "criteria": []
+          },
+          "rate": "NONE",
+          "enabled": true
+        }
+      ],
+      "visualConfig": {
+        "type": "TOP_LIST",
+        "global": {
+          "hideLegend": false
         },
-        "filtersPerEntityType": {}
-      }
+        "rules": [
+          {
+            "matcher": "A:",
+            "properties": {
+              "color": "DEFAULT",
+              "seriesType": "LINE"
+            },
+            "seriesOverrides": []
+          }
+        ],
+        "axes": {
+          "xAxis": {
+            "visible": true
+          },
+          "yAxes": [
+            {
+              "visible": true,
+              "min": "AUTO",
+              "max": "AUTO",
+              "position": "LEFT",
+              "queryIds": [
+                "A"
+              ],
+              "defaultAxis": true
+            }
+          ]
+        },
+        "heatmapSettings": {
+          "yAxis": "VALUE"
+        },
+        "thresholds": [],
+        "tableSettings": {
+          "hiddenColumns": []
+        },
+        "graphChartSettings": {
+          "connectNulls": false
+        },
+        "honeycombSettings": {
+          "showHive": true,
+          "showLegend": true,
+          "showLabels": false
+        }
+      },
+      "metricExpressions": [
+        "resolution=Inf&(builtin:service.dbconnections.failureRate:splitBy(\"dt.entity.service\"):value:sort(value(sum,descending)):limit(20)):limit(100):names"
+      ]
     },
     {
       "name": "Network",
