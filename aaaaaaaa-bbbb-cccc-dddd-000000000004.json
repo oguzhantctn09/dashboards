@@ -1,0 +1,1956 @@
+{
+    "metadata": {
+        "configurationVersions": [
+            3
+        ],
+        "clusterVersion": "1.215.107.20210414-181420"
+    },
+    "id": "aaaaaaaa-bbbb-cccc-dddd-000000000004",
+    "dashboardMetadata": {
+        "name": "Synthetics 2",
+        "shared": true,
+        "owner": "dave.mauney@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": true
+        },
+        "dashboardFilter": {
+            "timeframe": "",
+            "managementZone": null
+        }
+    },
+    "tiles": [
+        {
+            "name": "Total duration (by event) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total duration (by event) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.totalDuration",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total duration (by event, geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total duration (by event, geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.totalDuration.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - load action (by event) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - load action (by event) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.visuallyComplete.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - load action (by event, geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - load action (by event, geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.visuallyComplete.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - XHR action (by event) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - XHR action (by event) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.visuallyComplete.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - XHR action (by event, geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - XHR action (by event, geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.event.visuallyComplete.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST_STEP",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test_step",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Failed executions count [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Failed executions count [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.failure",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Failed executions count (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Failed executions count (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.failure.geo",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Time to first byte - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Time to first byte - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.firstByte.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Time to first byte - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Time to first byte - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.firstByte.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Time to first byte - XHR action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Time to first byte - XHR action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.firstByte.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Time to first byte - XHR action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Time to first byte - XHR action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.firstByte.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Largest contentful paint - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Largest contentful paint - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.largestContentfulPaint.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Largest contentful paint - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Largest contentful paint - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.largestContentfulPaint.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Load event end - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Load event end - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.loadEventEnd.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Load event end - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Load event end - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.loadEventEnd.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Load event start - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Load event start - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.loadEventStart.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Load event start - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Load event start - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.loadEventStart.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Network contribution - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Network contribution - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.networkContribution.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Network contribution - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Network contribution - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.networkContribution.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Network contribution - XHR action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Network contribution - XHR action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.networkContribution.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Network contribution - XHR action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Network contribution - XHR action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.networkContribution.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Response end - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Response end - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.responseEnd.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Response end - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Response end - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.responseEnd.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Response end - XHR action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Response end - XHR action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.responseEnd.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Response end - XHR action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Response end - XHR action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.responseEnd.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Server contribution - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Server contribution - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.serverContribution.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Server contribution - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Server contribution - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.serverContribution.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Server contribution - XHR action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Server contribution - XHR action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.serverContribution.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Server contribution - XHR action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Server contribution - XHR action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.serverContribution.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Speed index - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Speed index - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.speedIndex.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Speed index - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Speed index - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.speedIndex.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Successful executions count [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Successful executions count [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.success",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Successful executions count (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Successful executions count (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.success.geo",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total executions count [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total executions count [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.total",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total executions count (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total executions count (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.total.geo",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total duration [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total duration [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.totalDuration",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total duration (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total duration (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.totalDuration.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - load action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - load action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.visuallyComplete.load",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - load action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - load action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.visuallyComplete.load.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - XHR action [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - XHR action [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.visuallyComplete.xhr",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Visually complete - XHR action (by geolocation) [browser monitor]",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1824,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Visually complete - XHR action (by geolocation) [browser monitor]",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:synthetic.browser.visuallyComplete.xhr.geo",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        }
+    ]
+}

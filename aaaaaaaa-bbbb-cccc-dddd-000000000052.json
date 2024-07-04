@@ -1,0 +1,1588 @@
+{
+    "metadata": {
+        "configurationVersions": [
+            3
+        ],
+        "clusterVersion": "1.215.107.20210414-181420"
+    },
+    "id": "aaaaaaaa-bbbb-cccc-dddd-000000000052",
+    "dashboardMetadata": {
+        "name": "Containers",
+        "shared": true,
+        "owner": "dave.mauney@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": true
+        },
+        "dashboardFilter": {
+            "timeframe": "",
+            "managementZone": null
+        }
+    },
+    "tiles": [
+        {
+            "name": "CPU limit",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU limit",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.limit",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU logical cores",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU logical cores",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.logicalCores",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU shares",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU shares",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.shares",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU throttled mCores",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU throttled mCores",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.throttledMilliCores",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU throttled time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU throttled time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.throttledTime",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU throttling ratio (deprecated)",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU throttling ratio (deprecated)",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.throttlingRatio",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage mCores",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage mCores",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageMilliCores",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage % of limit",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage % of limit",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usagePercent",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage system mCores",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage system mCores",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageSystemMilliCores",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage system time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage system time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageSystemTime",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageTime",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage user mCores",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage user mCores",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageUserMilliCores",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "CPU usage user time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "CPU usage user time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu.usageUserTime",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory cache",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory cache",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.cacheBytes",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory limit",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory limit",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.limitBytes",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory limit % of physical memory",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory limit % of physical memory",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.limitPercent",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Out of memory kills",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Out of memory kills",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.outOfMemoryKills",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory physical total",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory physical total",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.physicalTotalBytes",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory usage",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory usage",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.residentSetBytes",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory usage % of limit",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory usage % of limit",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory.usagePercent",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Container bytes received",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Container bytes received",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.bytes_rx2",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Container bytes transmitted",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Container bytes transmitted",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.bytes_tx2",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Container cpu usage",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Container cpu usage",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.cpu_usage2",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Devicemapper data space available",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Devicemapper data space available",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.devicemapper_data_space_available",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Devicemapper data space used",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Devicemapper data space used",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.devicemapper_data_space_used",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Devicemapper meta-data space available",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Devicemapper meta-data space available",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.devicemapper_metadata_space_available",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Devicemapper meta-data space used",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Devicemapper meta-data space used",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.devicemapper_metadata_space_used",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory percent",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory percent",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory_percent",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Container memory usage",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Container memory usage",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.memory_usage2",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Number of containers launched",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1216,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Number of containers launched",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.no_of_containers_launched",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Number of containers running",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Number of containers running",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.no_of_containers_per_pgi",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Number of containers running",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Number of containers running",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.no_of_containers_running",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Number of containers terminated",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Number of containers terminated",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.no_of_containers_terminated",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Container throttled time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 1520,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Container throttled time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:containers.throttled_time2",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MONITORED_ENTITY\u02dfDOCKER_CONTAINER_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.docker_container_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,1036 @@
+{
+    "metadata": {
+        "configurationVersions": [
+            3
+        ],
+        "clusterVersion": "1.215.107.20210414-181420"
+    },
+    "id": "aaaaaaaa-bbbb-cccc-dddd-000000000040",
+    "dashboardMetadata": {
+        "name": "Redis",
+        "shared": true,
+        "owner": "dave.mauney@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": true
+        },
+        "dashboardFilter": {
+            "timeframe": "",
+            "managementZone": null
+        }
+    },
+    "tiles": [
+        {
+            "name": "Database average key TTL",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Database average key TTL",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.avg_ttl",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Blocked clients",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Blocked clients",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.blocked_clients",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Connected clients",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Connected clients",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.connected_clients",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Connected replicas",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Connected replicas",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.connected_slaves",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Evicted keys",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Evicted keys",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.evicted_keys",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Expired keys",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Expired keys",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.expired_keys",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Database expired keys",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Database expired keys",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.expires",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Cache hit ratio",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Cache hit ratio",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.hit_ratio",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Database keys",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Database keys",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.keys",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Keyspace hits",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Keyspace hits",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.keyspace_hits",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Keyspace misses",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Keyspace misses",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.keyspace_misses",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Last interaction with master",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Last interaction with master",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.master_last_io_seconds_ago",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Max memory",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Max memory",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.maxmemory",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory fragmentation",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory fragmentation",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.mem_fragmentation_ratio",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Memory usage",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Memory usage",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.memory_usage",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Rejected connections",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Rejected connections",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.rejected_connections",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Response time",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Response time",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.responsiveness",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Replica status",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Replica status",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.slave_state",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Slow queries",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Slow queries",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.slowlog_len",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total commands processed",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total commands processed",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.total_commands_processed",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total connections received",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total connections received",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.total_connections_received",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Used memory",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 912,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Used memory",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:tech.redis.used_memory",
+                            "aggregation": "AVG",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "PROCESS_GROUP_INSTANCE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.process_group_instance",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        }
+    ]
+}

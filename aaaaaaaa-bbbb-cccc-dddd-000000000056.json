@@ -1,0 +1,668 @@
+{
+    "metadata": {
+        "configurationVersions": [
+            3
+        ],
+        "clusterVersion": "1.215.107.20210414-181420"
+    },
+    "id": "aaaaaaaa-bbbb-cccc-dddd-000000000056",
+    "dashboardMetadata": {
+        "name": "Billing",
+        "shared": true,
+        "owner": "dave.mauney@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": true
+        },
+        "dashboardFilter": {
+            "timeframe": "",
+            "managementZone": null
+        }
+    },
+    "tiles": [
+        {
+            "name": "Session count",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Session count",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.custom.sessionsWithoutReplayByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CUSTOM_APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.device_application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total user action and session properties",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total user action and session properties",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.custom.userActionPropertiesByDeviceApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "CUSTOM_APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.device_application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Sessions with replay",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Sessions with replay",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.mobile.sessionsWithReplayByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MOBILE_APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.mobile_application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Session count",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Session count",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.mobile.sessionsWithoutReplayByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MOBILE_APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.mobile_application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total user action and session properties",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total user action and session properties",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.mobile.userActionPropertiesByMobileApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "MOBILE_APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.mobile_application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Sessions with replay",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 0,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Sessions with replay",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.web.sessionsWithReplayByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Sessions without replay",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Sessions without replay",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.web.sessionsWithoutReplayByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total user action and session properties",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total user action and session properties",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.apps.web.userActionPropertiesByApplication",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "APPLICATION",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.application",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Total Davis data units metric consumption",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 608,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Total Davis data units metric consumption",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.ddu.metrics.total",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "NONE",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.none",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Davis data units included per host",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 912,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Davis data units included per host",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.ddu.includedMetricDduPerHost",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Davis data units included metrics per host",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1216,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Davis data units included metrics per host",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.ddu.includedMetricPerHost",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "HOST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.host",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Actions",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 304,
+                "left": 1520,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Actions",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.synthetic.actions",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Third-party results",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 0,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Third-party results",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.synthetic.external",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "EXTERNAL_SYNTHETIC_TEST",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.external_synthetic_test",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        },
+        {
+            "name": "Requests",
+            "tileType": "CUSTOM_CHARTING",
+            "configured": true,
+            "bounds": {
+                "top": 608,
+                "left": 304,
+                "width": 304,
+                "height": 304
+            },
+            "tileFilter": {
+                "timeframe": null,
+                "managementZone": null
+            },
+            "filterConfig": {
+                "type": "MIXED",
+                "customName": "Requests",
+                "defaultName": "Custom chart",
+                "chartConfig": {
+                    "legendShown": true,
+                    "type": "TIMESERIES",
+                    "series": [
+                        {
+                            "metric": "builtin:billing.synthetic.requests",
+                            "aggregation": "NONE",
+                            "percentile": null,
+                            "type": "LINE",
+                            "entityType": "SYNTHETIC_HTTPCHECK",
+                            "dimensions": [
+                                {
+                                    "id": "0",
+                                    "name": "dt.entity.http_check",
+                                    "values": [],
+                                    "entityDimension": true
+                                }
+                            ],
+                            "sortAscending": false,
+                            "sortColumn": true,
+                            "aggregationRate": "TOTAL"
+                        }
+                    ],
+                    "resultMetadata": {}
+                },
+                "filtersPerEntityType": {}
+            }
+        }
+    ]
+}

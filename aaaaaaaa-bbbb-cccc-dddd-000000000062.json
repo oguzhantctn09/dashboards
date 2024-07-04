@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "configurationVersions": [
+            3
+        ],
+        "clusterVersion": "1.202.80.20200921-133947"
+    },
+    "id": "aaaaaaaa-bbbb-cccc-dddd-000000000062",
+    "dashboardMetadata": {
+        "name": "Services: RPC",
+        "shared": true,
+        "owner": "dave.mauney@dynatrace.com",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": true
+        },
+        "dashboardFilter": {
+            "timeframe": "",
+            "managementZone": null
+        }
+    },
+    "tiles": []
+}
